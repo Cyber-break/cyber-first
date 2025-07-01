@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="input">
+        <label for="input1"> Input 1:</label>
+        <input type="number" id="input1" value="">
+        <br>
+        <label for="input2">Input 2:</label>
+        <input type="number" id="input2" value="">
+        <br>
+        <button onclick="sum()"> Add </button>
+    </div>
+    <p style="background-color: green; color: white; padding: 10px; display: none;" id="details">
+        The result of adding <span id="Input1"></span> add 
+        <span id="Input2"></span> is:
+        <span id="result"></span>
+    </p>
+    </section>
+    <script>
+
+function sum() {
+    let n1 = parseFloat(document.getElementById("input1").value);
+    let n2 = parseFloat(document.getElementById("input2").value);
+    let total = n1 + n2;
+
+    document.getElementById("Input1").textContent = n1;
+    document.getElementById("Input2").textContent = n2;
+    document.getElementById("result").textContent = total;
+    let descpara = document.getElementById("details");
+    descpara.style.display = "block";
+}
+</script>
+
+        
+</body>
+</html>

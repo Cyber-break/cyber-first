@@ -1,0 +1,17 @@
+.parent{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid
+}
+.child{
+
+   background-color: aqua;
+    border: 5px sienna solid;
+    padding:5px;
+    margin: 5px;
+    text-align: center;
+}
+.der-radius: 20px;
+    overflow: hidden;
+}

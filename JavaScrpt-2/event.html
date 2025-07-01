@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button onclick="_onClick()"> Click Me </button>
+    <p id="message"></p>
+    <p id = "date"></p>
+    <br>
+    <br>
+    <br> -->
+
+                <!--  This is Mouse events -->
+    <h2 id="mouseOver" onmouseover = "_mouseOver()" onmouseleave = "_onMouseLeave()" 
+    onmousedown="_onMouseDown()" onmouseup="_onMouseUp()"
+    onclick = "_mouseOnclick()"> Dray your Mouse Over here! </h2>
+
+            <!-- This is keyboard events -->
+    <br>
+    <br>
+    <br>
+    <input type="text" onfocus="_keyFocus()" id="focus"
+    onkeypress="_keyPress()" onkeydown="_keyDown()">
+    <br>
+    <br>
+
+
+            <!-- This is form events -->
+    <form action="" onsubmit="return myFunction()" name="myName">
+        <input type="text" id="name" name="name">
+        <p id="nmessage"></p>
+        <button type="submit">
+            HTML Submit
+        </button>
+    </form>
+
+<!-- 
+    <button onclick="_submit()">JS SUBMIT</button> -->
+
+
+    <script>
+
+        // function _mouseOver(){
+        //     let x = document.getElementById('mouseOver');
+        //     x.style.color="red";
+        // }
+                // Mouse Events
+        function _mouseOnclick(){
+            let x = document.getElementById('mouseOver');
+            x.style.color="blue";
+        }
+        function _mouseOver(){
+            let x = document.getElementById('mouseOver');
+            x.style.color="red";
+        }
+        function _onMouseLeave(){
+            let x = document.getElementById('mouseOver');
+            x.style.color="black";
+        }
+        function _onMouseDown(){
+            let x = document.getElementById('mouseOver');
+            x.innerHTML="Mouse Down";
+        }
+        function _onMouseUp(){
+            let x = document.getElementById('mouseOver');
+            x.innerHTML="Mouse Up";
+        }
+
+                // Keyboard Events
+            function _keyFocus(){
+                let x = document.getElementById('focus');
+                x.style.padding=('8px');
+            }
+            function _keyPress(){
+                let x = document.getElementById('focus');
+                alert("Key Is Up");
+            } 
+            function _keyDown(){
+                let x = document.getElementById('focus');
+                alert("Key Is Down");
+            }
+
+            // This is form events
+            function myFunction(){
+                let x = document.myName.name.value;
+                if(x=="")
+            {
+                document.getElementById('nmessage').innerHTML="x is required";
+                return false;
+            }
+            else{
+                document.getElementById('nmessage').innerHTML="successfully Submitted";
+                return true;
+            }
+            }
+    </script>
+</body>
+</html>
